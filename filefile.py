@@ -16,7 +16,7 @@ def downloader():
             cards[element['name']] = element
         while not data['next_page'][i-1] == '=':
             i = i-1
-        print('I am on page ' + data['next_page'][i:] + 'out of' + str(round(data['total_cards']/175)+1))
+        print('I am on page ' + data['next_page'][i:] + ' out of ' + str(round(data['total_cards']/175)+1))
         data = requests.get(data['next_page']).json()
 
     # Grabs the last page
