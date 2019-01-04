@@ -49,6 +49,7 @@ def autocomplete(cardname):
 try:
     cardict = json.load(open('cardict'))
 except FileNotFoundError:
+    print('Downloading Card Information:')
     downloader()
     cardict = json.load(open('cardict'))
 
